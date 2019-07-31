@@ -1,4 +1,10 @@
-.eslintrc
+coverage
+node_modules
+test
+
+.nyc_output
 .babelrc
 .browserslistrc
+
+test.js
 tsconfig.json

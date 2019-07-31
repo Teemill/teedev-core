@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@teedev/eslint-config-base"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "@teedev/core",
+  "version": "1.0.0",
+  "description": "Teedev core library",
+  "author": "cynicaltoaster8@gmail.com",
+  "keywords": [
+    "teedev",
+    "core"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint lib",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel lib --out-dir dist --extensions .ts,.js",
+    "build:test": "babel ./ --ignore node_modules,dist,test-dist --out-dir ./test-dist --extensions .ts,.js",
+    "test": "cross-env NODE_ENV=test mocha --full-trace --require test.js test/**/*.spec.ts",
+    "coverage": "nyc --reporter=lcov --reporter=text npm run test"
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*.js",
+      "lib/**/*.ts"
+    ],
+    "extension": [
+      ".js",
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@teedev/babel-preset-base": "^1.0.0",
+    "@teedev/eslint-config-base": "^1.0.0",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "core-js": "^3.1.4"
+  }
+}

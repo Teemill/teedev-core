@@ -19,6 +19,7 @@
     "test": "cross-env NODE_ENV=test mocha --full-trace --require test.js test/**/*.spec.ts",
     "coverage": "nyc --reporter=lcov --reporter=text npm run test"
   },
+  "main": "dist/index.js",
   "nyc": {
     "include": [
       "lib/**/*.js",

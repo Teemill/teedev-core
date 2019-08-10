@@ -1,5 +1,6 @@
 import {
   minBy,
+  maxBy,
   orderBy,
 } from 'lodash';
 
@@ -18,12 +19,6 @@ export class Breakpoint {
   static get(size: BreakpointSize): Breakpoint
 
   static get(arg: any): Breakpoint | undefined {
-    if (typeof arg === 'number') {
-
-    } else if (typeof arg === 'string') {
-
-    }
-
     switch (typeof arg) {
       case 'number':
         const orderedBreakpoints = orderBy(
@@ -45,8 +40,32 @@ export class Breakpoint {
     }
   }
 
-  static smallest(breakpoints: Breakpoint[]) {
-    return minBy(breakpoints, 'width');
+  static smallest(): Breakpoint
+  static smallest(breakpoints: Breakpoint[]): Breakpoint
+
+  static smallest(arg?: Breakpoint[]): Breakpoint {
+    if (
+      !arg ||
+      arg.length === 0
+    ) {
+      return minBy(breakpoints, 'width')!;
+    }
+
+    return minBy(arg, 'width')!;
+  }
+
+  static largest(): Breakpoint
+  static largest(breakpoints: Breakpoint[]): Breakpoint
+
+  static largest(arg?: Breakpoint[]): Breakpoint {
+    if (
+      !arg ||
+      arg.length === 0
+    ) {
+      return maxBy(breakpoints, 'width')!;
+    }
+
+    return maxBy(arg, 'width')!;
   }
 
   equalTo(width: number): boolean {

@@ -47,7 +47,9 @@
     "@teedev/babel-preset-base": "^1.0.0",
     "@teedev/eslint-config-base": "^1.0.0",
     "@types/chai": "^4.1.7",
+    "@types/lodash": "^4.14.136",
     "@types/mocha": "^5.2.7",
+    "babel-plugin-transform-imports": "^2.0.0",
     "chai": "^4.2.0",
     "cross-env": "^5.2.0",
     "mocha": "^6.2.0",
@@ -58,6 +60,7 @@
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/runtime": "^7.5.5",
-    "core-js": "^3.1.4"
+    "core-js": "^3.1.4",
+    "lodash": "^4.17.15"
   }
 }

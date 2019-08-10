@@ -3,12 +3,8 @@ import 'mocha';
 import { expect } from 'chai';
 import { Vector } from '../lib';
 
-describe('Vector Class', () => {
+describe('Vector Type', () => {
   describe('constructor', () => {
-    it('new instance returns [0, 0]', () => {
-      expect(0).to.equal(0);
-    });
-
     it('new instance returns [0, 0]', () => {
       const result = new Vector();
   

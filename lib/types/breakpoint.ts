@@ -6,6 +6,8 @@ import {
 
 export type BreakpointSize = 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 
+export type BreakpointMap<T> = { [key in BreakpointSize]: T; }
+
 export class Breakpoint {
   public size: BreakpointSize;
   public width: number;

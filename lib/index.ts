@@ -1,7 +1,8 @@
 /**
  * Types
  */
-export { default as Vector } from './types/vector';
-export { default as Angle } from './types/angle';
-export { default as Matrix } from './types/matrix';
-export { default as Transform } from './types/transform';
+export { Vector } from './types/vector';
+export { Angle } from './types/angle';
+export { Matrix } from './types/matrix';
+export { Transform } from './types/transform';
+export { Breakpoint } from './types/breakpoint';

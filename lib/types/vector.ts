@@ -46,7 +46,7 @@ function assertVectorLike(arg1?: any, arg2?: any): VectorLike {
   return new Vector();
 }
 
-export default class Vector {
+export class Vector {
   public x: number
   public y: number
 

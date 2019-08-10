@@ -3,7 +3,7 @@ const radiansToDegrees = 180 / Math.PI;
 
 type Unit = 'degrees' | 'radians';
 
-export default class Angle {
+export class Angle {
   angle: number
   unit:  Unit
 

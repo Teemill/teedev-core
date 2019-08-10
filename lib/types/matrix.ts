@@ -4,7 +4,7 @@ import { Vector, Angle } from '../index';
 // [b d f]
 // [0 0 1]
 
-export default class Matrix {
+export class Matrix {
   m11: number
   m12: number
   m13: number

@@ -10,3 +10,9 @@ export {
   BreakpointMap,
   BreakpointSize,
 } from './types/breakpoint';
+
+
+/**
+ * Classes
+ */
+export { Dot } from './classes/dot';
